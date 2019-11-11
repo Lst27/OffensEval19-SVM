@@ -1,6 +1,6 @@
 # OffensEval19-SVM
 This repository contains the (mainly hard-coded) code for the SVM used in the OffensEval task 2019.
-For a detailed secription see: [TuKaSt at SemEval-2019 Task 6: something old, something neu(ral): Traditional and neural approaches to offensive text classification.](https://www.aclweb.org/anthology/S19-2134.pdf) 
+For a detailed decription see: [TuKaSt at SemEval-2019 Task 6: something old, something neu(ral): Traditional and neural approaches to offensive text classification.](https://www.aclweb.org/anthology/S19-2134.pdf) 
 
 ### Usage
 python svm.py --vector {1,2,3} --model {A,B,C} training_file.tsv  prediction_infile.tsv  outfile  --tenfold
