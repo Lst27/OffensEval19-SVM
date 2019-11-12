@@ -163,6 +163,7 @@ class ModelB:
     def __init__(self, input_file, v):
         self.model = svm.SVC(C=2.0, class_weight={1: 1, -1: 4.5})
         self.vecstuff = invertedIndex.VecStuff(input_file)
+        self.vecstuff.load(input_file)
         self.vec = v
 
     def get_vec(self, i, tweet):
@@ -282,7 +283,8 @@ class ModelC:
 
     def __init__(self, input_file, v):
         self.model = svm.SVC(C=2, kernel='rbf', decision_function_shape='ovo', class_weight={0: 1, 1: 2.4, 2: 6})
-        self.vecstuff = invertedIndex.VecStuff('../training-v1/offenseval-training-v1.tsv')
+        self.vecstuff = invertedIndex.VecStuff(input_file)
+        self.vecstuff.load(input_file)
         self.vec = v
 
     def get_vec(self, i, tweet):
